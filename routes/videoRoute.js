@@ -11,7 +11,8 @@ router.get("/", async (req, res) => {
         return res.status(400).json({ error: "Missing 'id' parameter in the query" });
     }
     
-    const videoId = simpleDecryptFun(encryptedID);
+    //const videoId = simpleDecryptFun(encryptedID);
+    const videoId = encryptedID;
 
     if (!videoId) {
         return res.status(400).json({ error: `Invalid 'id' parameter in the query: ${encryptedID}` });
