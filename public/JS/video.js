@@ -7,7 +7,7 @@ let shareCount = urlParams.get('sharesCount') ?? 0;
 let encryptedID = urlParams.get('id');  // Assume the ID is encrypted in the URL
 
 if (encryptedID) {
-    fetch(`http://localhost:3000/video?id=${encryptedID}`) // Point to the backend
+    fetch(`/video?id=${encryptedID}`) // Point to the backend
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch the story');
